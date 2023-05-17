@@ -381,7 +381,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Student 
       <li id="cid_1" class="form-input-wide" data-type="control_head">
         <div class="form-header-group  header-large">
           <h1 id="header_1" class="form-header" data-component="header">
-            PERSETUJUAN PEMBAYARAN CUSTOMER DPK
+            PELUNASAN DIPERCEPAT CUSTOMER
           </h1>
         </div>
       </li>
@@ -407,124 +407,131 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Student 
       </div>
       <li class="form-line form-col-1" data-type="control_birthdate" id="id_24">
         <label class="form-label form-label-top" id="label_24" for="input_24"> Data Customer </label>
+        <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px; margin-top:-10px; margin-bottom:10px;" aria-hidden="false"> (*) Wajib diisi jika bukan debitur </label>
         <div id="cid_24" class="form-input-wide" data-layout="full" style="margin-bottom: 10px;">
-          <div data-wrapper-react="true">
             <span class="form-sub-label-container" style="vertical-align:top">
-            <input 
-                type="text"
-                id="namaCust" 
-                name="namaCust"
-                class="mask-phone-number form-textbox validate[Fill Mask]"
-                onkeypress="return /[A-Z]/i.test(event.key)"
-                <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
-              />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nama Customer </label>
+                <input 
+                    type="text"
+                    id="namaDebitur" 
+                    name="namaDebitur"
+                    class="mask-phone-number form-textbox validate[Fill Mask]"
+                    onkeypress="return /[A-Z]/i.test(event.key)"
+                    <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                />
+                <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px;margin-bottom: 10px;" aria-hidden="false"> Nama Lengkap (Debitur) </label>
             </span>
-            <span class="form-sub-label-container" style="vertical-align:top">
-            <input 
-                type="text"
-                id="noPolisi" 
-                name="noPolisi"
-                class="mask-phone-number form-textbox validate[Fill Mask]"
-                maxlength="25" 
-                <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
-              />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nomor Polisi </label>
-            </span>
-          </div>
+            <div data-wrapper-react="true" style="margin-bottom: 10px;">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                    <input 
+                        type="text"
+                        id="namaCust" 
+                        name="namaCust"
+                        class="mask-phone-number form-textbox validate[Fill Mask]"
+                        onkeypress="return /[A-Z]/i.test(event.key)"
+                        <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                    />
+                    <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nama Lengkap (Selain Debitur / Pihak Ketiga) * </label>
+                </span>
+                <span class="form-sub-label-container" style="vertical-align:top">
+                    <input 
+                        type="text"
+                        id="hubungan" 
+                        name="hubungan"
+                        class="mask-phone-number form-textbox validate[Fill Mask]"
+                        maxlength="25" 
+                        <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                    />
+                    <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Hubungan Dengan Debitur * </label>
+                </span>
+            </div>
+            <div data-wrapper-react="true" style="margin-bottom: 10px;">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                    <input 
+                        type="text"
+                        id="alamat" 
+                        name="alamat"
+                        class="mask-phone-number form-textbox validate[Fill Mask]"
+                        <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                    />
+                    <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Alamat </label>
+                </span>
+                <span class="form-sub-label-container" style="vertical-align:top">
+                    <input 
+                        type="tel"
+                        id="noTelp" 
+                        name="noTelp"
+                        class="mask-phone-number form-textbox validate[Fill Mask]"
+                        onkeypress="return /[0-9]/i.test(event.key)"
+                        maxlength="12" 
+                        <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                    />
+                    <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nomor Telepon </label>
+                </span>
+            </div>
+            <div data-wrapper-react="true" style="margin-bottom: 10px;">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                    <input 
+                        type="text"
+                        id="pekerjaan" 
+                        name="pekerjaan"
+                        class="mask-phone-number form-textbox validate[Fill Mask]"
+                        <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                    />
+                    <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Pekerjaan </label>
+                </span>
+                <span class="form-sub-label-container" style="vertical-align:top">
+                    <input 
+                        type="text"
+                        id="namaPerusahaan" 
+                        name="namaPerusahaan"
+                        class="mask-phone-number form-textbox validate[Fill Mask]"
+                        <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                    />
+                    <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nama Perusahaan </label>
+                </span>
+            </div>
+            <div data-wrapper-react="true" style="margin-bottom: 10px;">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                    <input 
+                        type="text"
+                        id="alasanPelunasan" 
+                        name="alasanPelunasan"
+                        class="mask-phone-number form-textbox validate[Fill Mask]"
+                        <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                    />
+                    <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Alasan Pelunasan </label>
+                </span>
+                <span class="form-sub-label-container" style="vertical-align:top">
+                    <input 
+                        type="text"
+                        id="sumberDanaPelunasan" 
+                        name="sumberDanaPelunasan"
+                        class="mask-phone-number form-textbox validate[Fill Mask]"
+                        <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                    />
+                    <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Sumber Dana Pelunasan </label>
+                </span>
+            </div>
         </div>
-        <span class="form-sub-label-container" style="vertical-align:top">
-          <input 
-            type="text"
-            id="noKontrak" 
-            name="noKontrak"
-            class="mask-phone-number form-textbox validate[Fill Mask]"
-            maxlength="25" 
-            <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
-          />
-          <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nomor Kontrak </label>
-        </span>
       </li>
       <li class="form-line form-col-1" data-type="control_birthdate" id="id_24">
-        <label class="form-label form-label-top" id="label_24" for="input_24"> Angsuran </label>
+        <label class="form-label form-label-top" id="label_24" for="input_24"> Total Pembayaran Pelunasan </label>
         <div id="cid_24" class="form-input-wide" data-layout="full" style="margin-bottom: 10px;">
           <div data-wrapper-react="true">
             <span class="form-sub-label-container" style="vertical-align:top">
-              <input type="tel" id="nominalAngsuran" name="nominalAngsuran" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_27 tel-national" data-masked="true" value="" placeholder="Rp." data-component="phone" aria-labelledby="label_27" />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nominal Perangsuran </label>
-            </span>
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <input 
-              type="text"
-              id="angsuranKe" 
-              name="angsuranKe"
-              class="mask-phone-number form-textbox validate[Fill Mask]"
-              onkeypress="return /[0-9]/i.test(event.key)"
-              maxlength="3"
-              <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
-              />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Angsuran yang Tertunggak </label>
+              <input type="tel" id="totalPelunasan" name="totalPelunasan" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_27 tel-national" data-masked="true" value="" placeholder="Rp." data-component="phone" aria-labelledby="label_27" />
+              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Total Pembayaran Pelunasan </label>
             </span>
           </div>
         </div>
       </li>
       <li class="form-line form-col-1" data-type="control_birthdate" id="id_24">
-        <label class="form-label form-label-top" id="label_24" for="input_24"> Tanggal Jatuh Tempo </label>
+        <label class="form-label form-label-top" id="label_24" for="input_24"> Lampirkan Identitas Pembayar </label>
         <div id="cid_24" class="form-input-wide" data-layout="full" style="margin-bottom: 10px;">
           <div data-wrapper-react="true">
             <span class="form-sub-label-container" style="vertical-align:top">
-              <input type="date" id="jtoTertunggak" name="jtoTertunggak" class="form-textbox" data-defaultvalue="" autoComplete="section-input_4 family-name" size="15" value="" data-component="last" aria-labelledby="label_4 sublabel_4_last" />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Tanggal Jatuh Tempo Angsuran Tertunggak </label>
-            </span>
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <input type="date" id="jtoBerikutnya" name="jtoBerikutnya" class="form-textbox" data-defaultvalue="" autoComplete="section-input_4 family-name" size="15" value="" data-component="last" aria-labelledby="label_4 sublabel_4_last" />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Tanggal Jatuh Tempo Angsuran Berikutnya </label>
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line form-col-1" data-type="control_birthdate" id="id_24">
-        <label class="form-label form-label-top" id="label_24" for="input_24"> Jumlah </label>
-        <div id="cid_24" class="form-input-wide" data-layout="full" style="margin-bottom: 10px;">
-          <div data-wrapper-react="true">
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <input type="tel" id="jlhAngsuranTertunggak" name="jlhAngsuranTertunggak" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_27 tel-national" data-masked="true" value="" placeholder="Rp." data-component="phone" aria-labelledby="label_27" />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Jumlah Angsuran Tertunggak </label>
-            </span>
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <input type="tel" id="jlhDendaTertunggak" name="jlhDendaTertunggak" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_27 tel-national" data-masked="true" value="" placeholder="Rp." data-component="phone" aria-labelledby="label_27" />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Jumlah Denda Tertunggak </label>
-            </span>
-          </div>
-        </div>
-        <span class="form-sub-label-container" style="vertical-align:top">
-              <input type="text" id="totalTertunggak" name="totalTertunggak" class="form-textbox" data-defaultvalue="" autoComplete="section-input_4 family-name" size="15" value="" placeholder="Rp." data-component="last" aria-labelledby="label_4 sublabel_4_last" />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Total </label>
-            </span>
-      </li>
-      <li class="form-line form-col-1" data-type="control_birthdate" id="id_24">
-        <label class="form-label form-label-top" id="label_24" for="input_24"> Permohonan Customer </label>
-        <div id="cid_24" class="form-input-wide" data-layout="full" style="margin-bottom: 10px;">
-          <div data-wrapper-react="true">
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <input 
-              type="text" cols="30" rows="10"
-              id="permohonanCustomer" 
-              name="permohonanCustomer"
-              class="mask-phone-number form-textbox validate[Fill Mask]"
-              />
-            </span>
-          </div>
-        </div>
-        <label class="form-label form-label-top" id="label_24" for="input_24"> Disposisi Collection Head </label>
-        <div id="cid_24" class="form-input-wide" data-layout="full" style="margin-bottom: 10px;">
-          <div data-wrapper-react="true">
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <textarea
-                id="disposisiCollectionHead" cols="30" rows="10"
-                name="disposisiCollectionHead"
-                class="mask-phone-number form-textbox validate[Fill Mask]"
-                ></textarea>
+              <input type="file" id="IDPembayar" name="IDPembayar" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_27 tel-national" data-masked="true" value="" placeholder="Rp." data-component="phone" aria-labelledby="label_27" />
+              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Identitas Pembayar </label>
             </span>
           </div>
         </div>
@@ -565,24 +572,9 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Student 
 			return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
 		}
     
-    var jlhAngsuranTertunggak = document.getElementById('jlhAngsuranTertunggak');
-		jlhAngsuranTertunggak.addEventListener('keyup', function(e){
-			jlhAngsuranTertunggak.value = formatRupiah(this.value, 'Rp. ');
-		});
-    
-    var nominalAngsuran = document.getElementById('nominalAngsuran');
-		nominalAngsuran.addEventListener('keyup', function(e){
-			nominalAngsuran.value = formatRupiah(this.value, 'Rp. ');
-		});
-    
-    var jlhDendaTertunggak = document.getElementById('jlhDendaTertunggak');
-		jlhDendaTertunggak.addEventListener('keyup', function(e){
-			jlhDendaTertunggak.value = formatRupiah(this.value, 'Rp. ');
-		});
-    
-    var totalTertunggak = document.getElementById('totalTertunggak');
-		totalTertunggak.addEventListener('keyup', function(e){
-			totalTertunggak.value = formatRupiah(this.value, 'Rp. ');
+    var totalPelunasan = document.getElementById('totalPelunasan');
+		totalPelunasan.addEventListener('keyup', function(e){
+			totalPelunasan.value = formatRupiah(this.value, 'Rp. ');
 		});
   </script>
 </form>

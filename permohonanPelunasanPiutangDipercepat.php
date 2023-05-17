@@ -369,177 +369,214 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Student 
   /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
     /* Injected CSS Code */
 </style>
-  <form class="jotform-form" method="POST">
-  <input type="hidden" name="formID" value="222959161741460" />
-  <input type="hidden" id="JWTContainer" value="" />
-  <input type="hidden" id="cardinalOrderNumber" value="" />
-  <div role="main" class="form-all">
-    <style>
-      .form-all:before { background: none;}
-    </style>
-    <ul class="form-section page-section">
-      <li id="cid_1" class="form-input-wide" data-type="control_head">
-        <div class="form-header-group  header-large">
-          <h1 id="header_1" class="form-header" data-component="header">
-            PERSETUJUAN PEMBAYARAN CUSTOMER DPK
-          </h1>
-        </div>
-      </li>
-      <li class="form-line" data-type="control_fullname" id="id_4">
-        <label class="form-label form-label-top form-label-extended form-label-auto"> ID Pelanggan </label>
-        <div id="cid_4" class="form-input-wide" data-layout="half">
-          <div data-wrapper-react="true" class="extended">
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <input 
-                type="tel"
-                id="noIDPel" 
-                name="noIDPel"
-                class="mask-phone-number form-textbox validate[Fill Mask]"
-                onkeypress="return /[0-9]/i.test(event.key)"
-                maxlength="14" 
-                <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
-              />
-          </div>
-        </div>
-      </li>
-      <div style="padding-bottom: 25px;">
-        <input class="button-62" type="submit" id="cekIDPel" name="cekIDPel" value="Cek ID Pelanggan">
-      </div>
-      <li class="form-line form-col-1" data-type="control_birthdate" id="id_24">
-        <label class="form-label form-label-top" id="label_24" for="input_24"> Data Customer </label>
-        <div id="cid_24" class="form-input-wide" data-layout="full" style="margin-bottom: 10px;">
-          <div data-wrapper-react="true">
-            <span class="form-sub-label-container" style="vertical-align:top">
-            <input 
-                type="text"
-                id="namaCust" 
-                name="namaCust"
-                class="mask-phone-number form-textbox validate[Fill Mask]"
-                onkeypress="return /[A-Z]/i.test(event.key)"
-                <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
-              />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nama Customer </label>
-            </span>
-            <span class="form-sub-label-container" style="vertical-align:top">
-            <input 
-                type="text"
-                id="noPolisi" 
-                name="noPolisi"
-                class="mask-phone-number form-textbox validate[Fill Mask]"
-                maxlength="25" 
-                <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
-              />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nomor Polisi </label>
-            </span>
-          </div>
-        </div>
-        <span class="form-sub-label-container" style="vertical-align:top">
-          <input 
-            type="text"
-            id="noKontrak" 
-            name="noKontrak"
-            class="mask-phone-number form-textbox validate[Fill Mask]"
-            maxlength="25" 
-            <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
-          />
-          <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nomor Kontrak </label>
-        </span>
-      </li>
-      <li class="form-line form-col-1" data-type="control_birthdate" id="id_24">
-        <label class="form-label form-label-top" id="label_24" for="input_24"> Angsuran </label>
-        <div id="cid_24" class="form-input-wide" data-layout="full" style="margin-bottom: 10px;">
-          <div data-wrapper-react="true">
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <input type="tel" id="nominalAngsuran" name="nominalAngsuran" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_27 tel-national" data-masked="true" value="" placeholder="Rp." data-component="phone" aria-labelledby="label_27" />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nominal Perangsuran </label>
-            </span>
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <input 
-              type="text"
-              id="angsuranKe" 
-              name="angsuranKe"
-              class="mask-phone-number form-textbox validate[Fill Mask]"
-              onkeypress="return /[0-9]/i.test(event.key)"
-              maxlength="3"
-              <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
-              />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Angsuran yang Tertunggak </label>
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line form-col-1" data-type="control_birthdate" id="id_24">
-        <label class="form-label form-label-top" id="label_24" for="input_24"> Tanggal Jatuh Tempo </label>
-        <div id="cid_24" class="form-input-wide" data-layout="full" style="margin-bottom: 10px;">
-          <div data-wrapper-react="true">
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <input type="date" id="jtoTertunggak" name="jtoTertunggak" class="form-textbox" data-defaultvalue="" autoComplete="section-input_4 family-name" size="15" value="" data-component="last" aria-labelledby="label_4 sublabel_4_last" />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Tanggal Jatuh Tempo Angsuran Tertunggak </label>
-            </span>
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <input type="date" id="jtoBerikutnya" name="jtoBerikutnya" class="form-textbox" data-defaultvalue="" autoComplete="section-input_4 family-name" size="15" value="" data-component="last" aria-labelledby="label_4 sublabel_4_last" />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Tanggal Jatuh Tempo Angsuran Berikutnya </label>
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line form-col-1" data-type="control_birthdate" id="id_24">
-        <label class="form-label form-label-top" id="label_24" for="input_24"> Jumlah </label>
-        <div id="cid_24" class="form-input-wide" data-layout="full" style="margin-bottom: 10px;">
-          <div data-wrapper-react="true">
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <input type="tel" id="jlhAngsuranTertunggak" name="jlhAngsuranTertunggak" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_27 tel-national" data-masked="true" value="" placeholder="Rp." data-component="phone" aria-labelledby="label_27" />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Jumlah Angsuran Tertunggak </label>
-            </span>
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <input type="tel" id="jlhDendaTertunggak" name="jlhDendaTertunggak" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_27 tel-national" data-masked="true" value="" placeholder="Rp." data-component="phone" aria-labelledby="label_27" />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Jumlah Denda Tertunggak </label>
-            </span>
-          </div>
-        </div>
-        <span class="form-sub-label-container" style="vertical-align:top">
-              <input type="text" id="totalTertunggak" name="totalTertunggak" class="form-textbox" data-defaultvalue="" autoComplete="section-input_4 family-name" size="15" value="" placeholder="Rp." data-component="last" aria-labelledby="label_4 sublabel_4_last" />
-              <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Total </label>
-            </span>
-      </li>
-      <li class="form-line form-col-1" data-type="control_birthdate" id="id_24">
-        <label class="form-label form-label-top" id="label_24" for="input_24"> Permohonan Customer </label>
-        <div id="cid_24" class="form-input-wide" data-layout="full" style="margin-bottom: 10px;">
-          <div data-wrapper-react="true">
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <input 
-              type="text" cols="30" rows="10"
-              id="permohonanCustomer" 
-              name="permohonanCustomer"
-              class="mask-phone-number form-textbox validate[Fill Mask]"
-              />
-            </span>
-          </div>
-        </div>
-        <label class="form-label form-label-top" id="label_24" for="input_24"> Disposisi Collection Head </label>
-        <div id="cid_24" class="form-input-wide" data-layout="full" style="margin-bottom: 10px;">
-          <div data-wrapper-react="true">
-            <span class="form-sub-label-container" style="vertical-align:top">
-              <textarea
-                id="disposisiCollectionHead" cols="30" rows="10"
-                name="disposisiCollectionHead"
-                class="mask-phone-number form-textbox validate[Fill Mask]"
-                ></textarea>
-            </span>
-          </div>
-        </div>
-      </li>
-      <div style="padding-bottom: 25px; margin-left:-10px;">
-        <input class="form-submit-button submit-button jf-form-buttons jsTest-submitField" type="submit" id="submitButton" name="submitButton" value="Submit" onclick="validateAllData()">
-      </div>
-    </ul>
-  </div>  
+<form class="jotform-form" method="POST">
+    <input type="hidden" name="formID" value="222959161741460" />
+    <input type="hidden" id="JWTContainer" value="" />
+    <input type="hidden" id="cardinalOrderNumber" value="" />
+    <div role="main" class="form-all">
+        <style>
+        .form-all:before { background: none;}
+        </style>
+        <ul class="form-section page-section">
+            <li id="cid_1" class="form-input-wide" data-type="control_head">
+                <div class="form-header-group  header-large">
+                <h1 id="header_1" class="form-header" data-component="header" style="margin-bottom: -15px; margin-top: -15px;">
+                    PERMOHONAN PELUNASAN PIUTANG DIPERCEPAT
+                </h1>
+                </div>
+            </li>
+            <li class="form-line" data-type="control_fullname" id="id_4">
+                <label class="form-label form-label-top form-label-extended form-label-auto" style="margin-top: -10px;"> ID Pelanggan </label>
+                <div id="cid_4" class="form-input-wide" data-layout="half">
+                    <div data-wrapper-react="true" class="extended">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input 
+                                type="tel"
+                                id="noIDPel" 
+                                name="noIDPel"
+                                class="mask-phone-number form-textbox validate[Fill Mask]"
+                                onkeypress="return /[0-9]/i.test(event.key)"
+                                maxlength="14" 
+                                <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                            />
+                    </div>
+                </div>
+            </li>
+            <div style="padding-bottom: 25px;">
+                <input class="button-62" type="submit" id="cekIDPel" name="cekIDPel" value="Cek ID Pelanggan">
+            </div>
+            <li class="form-line form-col-1" data-type="control_birthdate" id="id_24">
+                <label class="form-label form-label-top" id="label_24" for="input_24" style="margin-top: -15px;"> Data Pemohon </label>
+                <div id="cid_24" class="form-input-wide" data-layout="full" style="margin-bottom: 10px;">
+                    <span class="form-sub-label-container" style="vertical-align:top">
+                        <input 
+                            type="text"
+                            id="namaPemohon" 
+                            name="namaPemohon"
+                            class="mask-phone-number form-textbox validate[Fill Mask]"
+                            onkeypress="return /[A-Z]/i.test(event.key)"
+                            <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                        />
+                        <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px;margin-bottom: 10px;" aria-hidden="false"> Nama Lengkap Pemohon </label>
+                    </span>
+                    <div data-wrapper-react="true" style="margin-bottom: 10px;">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input 
+                                type="text"
+                                id="alamat" 
+                                name="alamat"
+                                class="mask-phone-number form-textbox validate[Fill Mask]"
+                                <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                            />
+                            <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Alamat </label>
+                        </span>
+                    </div>
+                    <div data-wrapper-react="true" style="margin-bottom: 10px;">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input 
+                                type="tel"
+                                id="noKontrak" 
+                                name="noKontrak"
+                                maxlength="25" 
+                                class="mask-phone-number form-textbox validate[Fill Mask]"
+                                <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                            />
+                            <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nomor Kontrak </label>
+                        </span>
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input 
+                                type="text"
+                                id="namaSTNK" 
+                                name="namaSTNK"
+                                class="mask-phone-number form-textbox validate[Fill Mask]"
+                                <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                            />
+                            <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nama di STNK </label>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="form-line form-col-1" data-type="control_birthdate" id="id_24">
+                <label class="form-label form-label-top" id="label_24" for="input_24" style="margin-top: -15px;"> Data Kendaraan </label>
+                <div id="cid_24" class="form-input-wide" data-layout="full" style="margin-bottom: 10px;">
+                    <div data-wrapper-react="true" style="margin-bottom: 10px;">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input 
+                                type="text"
+                                id="noPolisi" 
+                                name="noPolisi"
+                                class="mask-phone-number form-textbox validate[Fill Mask]"
+                                <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                            />
+                            <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px;margin-bottom: 10px;" aria-hidden="false"> Nomor Polisi </label>
+                        </span>
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input 
+                                type="text"
+                                id="noRangka" 
+                                name="noRangka"
+                                class="mask-phone-number form-textbox validate[Fill Mask]"
+                                <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                            />
+                            <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nomor Rangka </label>
+                        </span>
+                    </div>
+                    <div data-wrapper-react="true" style="margin-bottom: 10px;">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input 
+                                type="text"
+                                id="merk" 
+                                name="merk"
+                                class="mask-phone-number form-textbox validate[Fill Mask]"
+                                <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                            />
+                            <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Merk </label>
+                        </span>
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input 
+                                type="text"
+                                id="noMesin" 
+                                name="noMesin"
+                                class="mask-phone-number form-textbox validate[Fill Mask]"
+                                <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                            />
+                            <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nomor Mesin </label>
+                        </span>
+                    </div>
+                    <div data-wrapper-react="true" style="margin-bottom: 10px;">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input 
+                                type="text"
+                                id="type" 
+                                name="type"
+                                class="mask-phone-number form-textbox validate[Fill Mask]"
+                                <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                            />
+                            <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Type </label>
+                        </span>
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input 
+                                type="text"
+                                id="tahun" 
+                                name="tahun"
+                                onkeypress="return /[0-9]/i.test(event.key)"
+                                maxlength="4"
+                                class="mask-phone-number form-textbox validate[Fill Mask]"
+                                <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                            />
+                            <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Tahun Kendaraan </label>
+                        </span>
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input 
+                                type="text"
+                                id="warna" 
+                                name="warna"
+                                class="mask-phone-number form-textbox validate[Fill Mask]"
+                                <?php if (isset($_POST['cekIDPel'])) echo 'value="'.$_POST['noIDPel'].'"';?>
+                            />
+                            <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Warna Kendaraan </label>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="form-line form-col-1" data-type="control_birthdate" id="id_24">
+                <h2 style="margin-top: -20px;">Data Piutang</h2>
+                <div id="cid_24" class="form-input-wide" data-layout="full" style="margin-bottom: 10px;">
+                    <label class="form-label form-label-top" id="label_24" for="input_24"> Sisa Angsuran</label>
+                    <div data-wrapper-react="true">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input type="tel" id="nominalAngsuran" name="nominalAngsuran" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_27 tel-national" data-masked="true" value="" placeholder="Rp." data-component="phone" aria-labelledby="label_27" />
+                            <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Nominal Angsuran </label>
+                        </span>
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input 
+                                    type="text"
+                                    id="bulan" 
+                                    name="bulan"
+                                    onkeypress="return /[0-9]/i.test(event.key)"
+                                    maxlength="2"
+                                    class="mask-phone-number form-textbox validate[Fill Mask]"
+                                />
+                            <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Bulan </label>
+                        </span>
+                    </div>
+                </div>
+                <span class="form-sub-label-container" style="vertical-align:top">
+                    <input type="tel" id="totalAngsuran" name="totalAngsuran" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_27 tel-national" data-masked="true" value="" placeholder="Rp." data-component="phone" aria-labelledby="label_27" />
+                    <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Total Angsuran yang belum Jto </label>
+                </span>
+            </li>
+            <div style="padding-bottom: 25px; margin-left:-10px;">
+                <input class="form-submit-button submit-button jf-form-buttons jsTest-submitField" type="submit" id="submitButton" name="submitButton" value="Submit" onclick="validateAllData()">
+            </div>
+        </ul>
+    </div>  
 
-  <script type="text/javascript">
+    <script type="text/javascript">
 
     function validateAllData() {
-      document.cookie = "validateData=gagal"
-      while (true) {
+        document.cookie = "validateData=gagal"
+        while (true) {
         var getRebateRate = document.getElementById("rebateRate").value;
         if (getRebateRate == "kosong") {
             sweetAlert('Gagal', 'Rebate Rate tidak boleh kosong', 'error');
@@ -547,44 +584,34 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Student 
         }
         document.cookie = "validateData=berhasil"        
         break
-      }
+        }
     }
 
     function formatRupiah(angka, prefix){
-			var number_string = angka.replace(/[^,\d]/g, '').toString(),
-			split   		= number_string.split(','),
-			sisa     		= split[0].length % 3,
-			rupiah     		= split[0].substr(0, sisa),
-			ribuan     		= split[0].substr(sisa).match(/\d{3}/gi);
-			if(ribuan){
-				separator = sisa ? '.' : '';
-				rupiah += separator + ribuan.join('.');
-			}
- 
-			rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
-			return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
-		}
-    
-    var jlhAngsuranTertunggak = document.getElementById('jlhAngsuranTertunggak');
-		jlhAngsuranTertunggak.addEventListener('keyup', function(e){
-			jlhAngsuranTertunggak.value = formatRupiah(this.value, 'Rp. ');
-		});
-    
+            var number_string = angka.replace(/[^,\d]/g, '').toString(),
+            split   		= number_string.split(','),
+            sisa     		= split[0].length % 3,
+            rupiah     		= split[0].substr(0, sisa),
+            ribuan     		= split[0].substr(sisa).match(/\d{3}/gi);
+            if(ribuan){
+                separator = sisa ? '.' : '';
+                rupiah += separator + ribuan.join('.');
+            }
+
+            rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+            return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+        }
+
+    var totalAngsuran = document.getElementById('totalAngsuran');
+        totalAngsuran.addEventListener('keyup', function(e){
+            totalAngsuran.value = formatRupiah(this.value, 'Rp. ');
+        });
+
     var nominalAngsuran = document.getElementById('nominalAngsuran');
-		nominalAngsuran.addEventListener('keyup', function(e){
-			nominalAngsuran.value = formatRupiah(this.value, 'Rp. ');
-		});
-    
-    var jlhDendaTertunggak = document.getElementById('jlhDendaTertunggak');
-		jlhDendaTertunggak.addEventListener('keyup', function(e){
-			jlhDendaTertunggak.value = formatRupiah(this.value, 'Rp. ');
-		});
-    
-    var totalTertunggak = document.getElementById('totalTertunggak');
-		totalTertunggak.addEventListener('keyup', function(e){
-			totalTertunggak.value = formatRupiah(this.value, 'Rp. ');
-		});
-  </script>
+        nominalAngsuran.addEventListener('keyup', function(e){
+            nominalAngsuran.value = formatRupiah(this.value, 'Rp. ');
+        });
+    </script>
 </form>
 <script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.36571"></script>
 <script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.36571"></script>
